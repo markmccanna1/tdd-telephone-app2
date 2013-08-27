@@ -26,10 +26,25 @@ describe Pizza do
   end
 
   describe '#add_toppings' do
+
     it "should be able to receive toppings" do
-      topping = Topping.new("sausage", 10)
+      topping = mock("topping")
       pizza.add_toppings(topping)
       expect(pizza.toppings.first).to eq topping
+    end
+  end
+
+
+  describe '#bake' do
+
+    it "should increment the time baked of the pizza" do
+      pizza.bake(5)
+      expect(pizza.time_baked).to eq 5
+    end
+
+    it "should invoke bake method on toppings" do
+      topping = mock("topping")
+      topping.should_receive(:bake)
     end
   end
 end
@@ -50,4 +65,5 @@ describe Topping do
       expect(topping.time_baked).to eql 0
     end
   end
+
 end
