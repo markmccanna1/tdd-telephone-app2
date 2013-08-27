@@ -45,6 +45,8 @@ describe Pizza do
     it "should invoke bake method on toppings" do
       topping = mock("topping")
       topping.should_receive(:bake)
+      pizza = stub.(:toppings => topping)
+      pizza.bake
     end
   end
 end
