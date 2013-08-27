@@ -1,10 +1,15 @@
 class Pizza
-  attr_accessor :name, :description, :time_baked
+  attr_accessor :name, :description, :time_baked, :toppings
 
   def initialize(name, description)
     @name = name
     @description = description
     @time_baked = 0
+    @toppings = []
+  end
+
+  def add_toppings(topping)
+    @toppings << topping
   end
 end
 
