@@ -12,9 +12,6 @@ class Pizza
     @toppings << topping
   end
 
-  def bake(x)
-
-  end
 end
 
 class Topping
@@ -24,9 +21,5 @@ class Topping
     @name = name
     @required_bake_time = required_bake_time
     @time_baked = 0
-  end
-
-  def bake
-
   end
 end
