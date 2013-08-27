@@ -18,6 +18,18 @@ describe Pizza do
       it 'should have a time baked' do
         expect(pizza.time_baked).to eql 0
       end
+
+      it 'should have toppings' do
+        expect(pizza.toppings).to eql []
+      end
+    end
+  end
+
+  describe '#add_toppings' do
+    it "should be able to receive toppings" do
+      topping = Topping.new("sausage", 10)
+      pizza.add_toppings(topping)
+      expect(pizza.toppings.first).to eq topping
     end
   end
 end

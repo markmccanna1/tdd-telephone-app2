@@ -5,7 +5,6 @@ class Pizza
     @name = name
     @description = description
     @time_baked = 0
-
   end
 end
 
