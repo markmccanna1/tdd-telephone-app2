@@ -49,6 +49,13 @@ describe Pizza do
       pizza.bake
     end
   end
+
+  describe "#baked?" do
+    it "should return true if pizza is baked"
+      pizza = stub.(:time_baked = 900)
+      expect(pizza.baked?).to eq true
+    end
+  end
 end
 
 describe Topping do
@@ -68,4 +75,17 @@ describe Topping do
     end
   end
 
+  describe '#bake' do
+    it 'should increment the time baked of a topping' do
+      topping.bake(5)
+      expect(topping.time_baked).to eql 5
+    end
+  end
+
+  describe '#baked?'
+    it 'should return true if time baked exceeds required bake time' do
+      topping = stub.(:time_baked = 12)
+      expect(topping.baked?).to eql true
+    end
+  end
 end
