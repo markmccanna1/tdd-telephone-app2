@@ -21,22 +21,3 @@ describe Pizza do
     end
   end
 end
-
-
-describe Topping do
-  let(:topping) {Topping.new("sausage", 10)}
-
-  describe '#initialize' do
-    it 'should have a name' do
-      expect(topping.name).to eql "sausage"
-    end
-
-    it 'should have a required bake time' do
-      expect(topping.required_bake_time).to eql 10
-    end
-
-    it 'should have a time baked of 0' do
-      expect(topping.time_baked).to eql 0
-    end
-  end
-end
